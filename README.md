@@ -1,0 +1,2 @@
+# interface_param
+[I-D.ietf-core-dynlink] defines five CoAP Observaton attributes  (minimum period, maximum period, band step, less than and greater  than) to control when notifications are sent.  These attributes are  insufficient for some use cases.  This document specifies additional attributes allowing for notification bands, initialization values, band step, sample number window and sample time window to allow for a wider range of use cases.
