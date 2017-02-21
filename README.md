@@ -1,2 +1,25 @@
-# interface_param
-[I-D.ietf-core-dynlink] defines five CoAP Observaton attributes  (minimum period, maximum period, band step, less than and greater  than) to control when notifications are sent.  These attributes are  insufficient for some use cases.  This document specifies additional attributes allowing for notification bands, initialization values, band step, sample number window and sample time window to allow for a wider range of use cases.
+# Additional CoAP Binding and Observe Attributes
+
+This is the working area for the Individual internet-draft, "Additional CoAP Binding and Observe Attributes".
+
+* [Editor's copy](https://cngroves.github.io/interface_param/)
+* [Individual Draft] (https://tools.ietf.org/html/draft-groves-core-obsattr)
+* [Compare Individual Draft and Editor's copy] (https://tools.ietf.org/rfcdiff?url1=https://tools.ietf.org/id/draft-groves-core-obsattr.txt&url2=https://cngroves.github.io/interface_param/draft-groves-core-obsattr.txt)
+
+
+## Building the Draft
+
+Formatted text and HTML versions of the draft can be built using `make`.
+
+```sh
+$ make
+```
+
+This requires that you have the necessary software installed.  See
+[the instructions](https://github.com/martinthomson/i-d-template/blob/master/doc/SETUP.md).
+
+
+## Contributing
+
+See the
+[guidelines for contributions](https://github.com/cngroves/interface_param/blob/master/CONTRIBUTING.md).
