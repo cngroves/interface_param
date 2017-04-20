@@ -2,7 +2,7 @@
 title: "Additional CoAP Binding and Observe Attributes"
 abbrev: CoAP Observe Attr.
 docname: draft-groves-core-obsattr-latest
-date: 2017-02-02
+date: 2017-02-21
 category: std
 
 ipr: trust200902
@@ -16,12 +16,12 @@ pi: [toc, sortrefs, symrefs]
 author:
 - ins: C. Groves
   name: Christian Groves
-  organization: Huawei
+  organization: 
   street: '' 
   city: ''
   code: ''
   country: Australia
-  email: Christian.Groves@mail01.huawei.com
+  email: cngroves.std@gmail.com
 - ins: W. Yang
   name: Weiwei Yang
   organization: Huawei
@@ -134,7 +134,7 @@ The band step MUST be greater than zero otherwise the server MUST return a CoAP 
 
 Change step (st) and band step (bst) MUST NOT occur together in the same query.
 
-Sample Number Window
+Sample Number Window (snw)
 --------------------
 If queuing of a number of state synchronizations are required then the sample number window attribute is set to the desired size of the window. The attribute may be set with valid combinations of other binding/resource observation attributes. When a state synchronization is triggered due to the other attributes the resource value is added to the list of samples instead of resulting in an update of the source and destination resource (state synchronization). Only when the number of samples in the window reaches the sample number window is a state sycnhronisation peformed for the resource. The samples are then flushed from the window and the process is repeated.
 
@@ -144,7 +144,7 @@ Consideration should also be given to the resource capacity (i.e. memory) of the
 
 The pmin and pmax attributes have an indirect effect on the overall state sychronization. Whilst pmin and pmax do not directly specify the period for the overall state sychronization the setting of pmin and pmax may trigger samples entering the sample window as thus affect the frequency of state synchronization.
 
-Sample Time Window
+Sample Time Window (stw)
 --------------------
 If state synchronizations are to be queued during a certain period of time (in seconds) then the sample time window attribute is used. The attribute may be set with valid combinations of other binding/resource observation attributes. On reception of a query with the stw attribute a timer (T1=0) is started. Whilst T1<stw when a state synchronization is triggered due to the other attributes, the resource value is added to the sample window instead of resulting in a state synchronization. When the time expires e.g. T1=stw the state sychronization for the resource occurs. The window is then flushed, T1 is re-started and the process is repeated.
 
